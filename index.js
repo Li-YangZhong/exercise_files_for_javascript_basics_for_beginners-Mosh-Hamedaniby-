@@ -51,14 +51,115 @@
 // console.log(person[selection]);//Mary
 //=================
 
-let selectedColors = ['red', 'blue'];
-console.log(selectedColors);
-console.log(selectedColors[0]);
-selectedColors[2] = 'green';
-console.log(selectedColors);
-selectedColors[3] = 1;
-console.log(selectedColors);
-console.log(typeof selectedColors); //In javascript, array is an object
-console.log(selectedColors.length); //length is a property
+// let selectedColors = ['red', 'blue'];
+// console.log(selectedColors);
+// console.log(selectedColors[0]);
+// selectedColors[2] = 'green';
+// console.log(selectedColors);
+// selectedColors[3] = 1;
+// console.log(selectedColors);
+// console.log(typeof selectedColors); //In javascript, array is an object
+// console.log(selectedColors.length); //length is a property
 
 //=============
+
+// function greet (name) {
+//     console.log('Hello ' + name);
+
+// }
+
+// greet('John');
+// greet('Mary');
+//==================
+
+// console.log();
+//===============
+
+// let x = 10;
+// let y = 3;
+// console.log( x ** y);//1000; exponentiation
+
+// console.log( x++);// 10
+// console.log(x);//11
+// console.log( ++y );//4
+// console.log(y); //4
+
+//===============
+// let x = 10;
+// x **= 3;
+// console.log(x);// 1000
+
+//=============
+// console.log(true === 1);//false; strict equality(checking type + value)
+// console.log(true == 1);//true; loose equality (checking value)
+// console.log(true == '1');//true
+//==============
+
+// console.log(2 > 1 ? "yes" : "no"); //ternary operator or conditional operator
+
+//==============
+
+// console.log(false || true);//true
+// console.log(false || 'Mosh');// Mosh
+// console.log(false || 1); //1
+// console.log( false || 1 || 2);// 1, short-circuting; the evaluation will stop as soon as the result is determined.
+
+//Falsy (false)
+//undefined
+// null
+// 0
+// false
+// '
+// NaN
+//==============
+//bitwise operators
+// // 1 = 00000001
+// // 2 = 00000010
+// // 3 = 00000011
+// console.log(1 | 2); // Bitwise OR; result is 3
+// console.log( 1 & 2); //Bitwise AND; result is 0
+
+//=================
+
+// Read, Write, Execute
+// 00000100
+// 00000010
+// 00000001
+
+// const readPermission = 4;
+// const writePermission = 2;
+// const executePermission = 1;
+
+// let myPermission = 0;
+// myPermission = myPermission | readPermission | writePermission; // use bitwise or (|) operator to add permission
+// console.log(myPermission); // 6
+
+// let message = (myPermission & readPermission) ? 'yes': 'no'; //use bitwise and (&)operator to check if a permission is set
+
+// console.log(message); // yes
+//================
+
+// let hour = 20;
+
+// if (hour >= 6 && hour < 12)
+//     console.log('Good morning');
+// else if (hour >= 12 && hour < 18)
+//     console.log('Good afternoon');
+// else
+//     console.log('Good evening');
+//===============
+
+let role;
+
+switch (role) {
+  case 'guest':
+    console.log('Guest User');
+    break;
+  
+  case 'moderator':
+    console.log('Moderator User');
+    break;
+
+  default:
+    console.log('Unknown User');
+}
