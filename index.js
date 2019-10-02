@@ -175,3 +175,67 @@
 //   i++;
 // }
 //================
+// let i = 0;
+// while(i < 5) {
+//   console.log(i);
+//   i++;
+// }
+//=============
+
+// let i = 9;
+// do {
+//   if (i % 2 !== 0) console.log(i);
+//   i++;
+// } while (i <= 5);
+//==================
+// const person = {
+//   name: 'Mosh',
+//   age: 30
+// }
+
+// for (let key in person)
+//   console.log(key, person[key]);
+
+// const colors = ['red', 'green', 'blue'];
+
+// for (let index in colors)
+//   console.log(index, colors[index]);
+
+// for (let color of colors) {
+  // console.log(color);
+// }
+  //================
+
+  // let i = 0;
+  // while(i <= 10) {
+  //   // if (i === 5) break;
+  //   if (i % 2 === 0) {
+  //     i++;
+  //     continue;
+  //   }
+  //   console.log(i);
+  //   i++;
+  // }
+//================
+console.log(typeof NaN);
+
+const output = fizzBuzz(150);
+console.log(output);
+
+function fizzBuzz(input) {
+  if( typeof input !== 'number')
+    return NaN;
+
+  if ((input % 3 === 0) && (input % 5 === 0))
+    return 'FizzBuzz';
+
+  if( input % 3 === 0) {
+    return 'Fizz';
+  }
+
+  if( input % 5 === 0) {
+    return 'Buzz';
+  }
+
+  return input;
+}
