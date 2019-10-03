@@ -217,42 +217,79 @@
   //   i++;
   // }
 //================
-console.log(typeof NaN);
+// console.log(typeof NaN);
 
-const output = fizzBuzz(150);
-console.log(output);
+// const output = fizzBuzz(150);
+// console.log(output);
 
-function fizzBuzz(input) {
-  if( typeof input !== 'number')
-    return NaN;
+// function fizzBuzz(input) {
+//   if( typeof input !== 'number')
+//     return NaN;
 
-  if ((input % 3 === 0) && (input % 5 === 0))
-    return 'FizzBuzz';
+//   if ((input % 3 === 0) && (input % 5 === 0))
+//     return 'FizzBuzz';
 
-  if( input % 3 === 0) {
-    return 'Fizz';
-  }
+//   if( input % 3 === 0) {
+//     return 'Fizz';
+//   }
 
-  if( input % 5 === 0) {
-    return 'Buzz';
-  }
+//   if( input % 5 === 0) {
+//     return 'Buzz';
+//   }
 
-  return input;
+//   return input;
+// }
+// function checkSpeed(speed) {
+//     const speedLimit = 70;
+//     const kmPerPoint = 5;
+
+//     if(speed < speedLimit + kmPerPoint) {
+//         console.log('OK');
+//         return;
+//     }
+
+//     const points = Math.floor((speed - speedLimit) /kmPerPoint);
+//     if (points >= 12)
+//         console.log('License suspended');
+//     else
+//         console.log('Points', points);
+// }
+
+// checkSpeed(180);
+//====================
+
+// const movie = {
+//   title: 'a',
+//   releaseYear: 2018,
+//   rating: 4.5,
+//   director: 'b'
+// }
+
+// showProperties(movie);
+
+// function showProperties(obj) {
+//   for (let key in obj) 
+//     console.log(key);
+// }
+//================
+// showNumbers(10);
+// function showNumbers(limit) {
+//   for(let i = 0; i <= limit; i++) {
+//     const message = (i % 2 === 0) ? 'EVEN' : 'ODD';
+//     console.log(i, message);
+//   }
+// }
+//==========
+const array = [0,null,undefined, false, NaN, '', 2,3];
+
+console.log(countTruthy(array));
+
+function countTruthy(array) {
+  let count = 0;
+  for( let value of array) 
+    if(value)
+      count++;
+  return count;
 }
-function checkSpeed(speed) {
-    const speedLimit = 70;
-    const kmPerPoint = 5;
 
-    if(speed < speedLimit + kmPerPoint) {
-        console.log('OK');
-        return;
-    }
 
-    const points = Math.floor((speed - speedLimit) /kmPerPoint);
-    if (points >= 12)
-        console.log('License suspended');
-    else
-        console.log('Points', points);
-}
-
-checkSpeed(180);
