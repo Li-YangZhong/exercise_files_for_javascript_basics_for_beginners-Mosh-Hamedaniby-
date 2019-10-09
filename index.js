@@ -280,16 +280,160 @@
 //   }
 // }
 //==========
-const array = [0,null,undefined, false, NaN, '', 2,3];
+// const array = [0,null,undefined, false, NaN, '', 2,3];
 
-console.log(countTruthy(array));
+// console.log(countTruthy(array));
 
-function countTruthy(array) {
-  let count = 0;
-  for( let value of array) 
-    if(value)
-      count++;
-  return count;
-}
+// function countTruthy(array) {
+//   let count = 0;
+//   for( let value of array) 
+//     if(value)
+//       count++;
+//   return count;
+// }
+//============
 
+// const movie = {
+//   title: 'a',
+//   releaseYear: 2018,
+//   rating: 4.5,
+//   director: 'b'
+// }
+
+// showProperties(movie);
+
+// function showProperties(obj) {
+//   for (let key in obj) {
+//     if( typeof obj[key] === 'string')
+//       console.log(key, obj[key]);
+//   }
+// }
+
+//================
+
+// console.log(sum(10));
+
+// function sum(limit) {
+//   let sum = 0;
+
+//   for( let i = 0; i <= limit; i++) 
+//     if(i % 3 === 0 || i % 5 === 0)
+//       sum += i;
+
+//   return sum;
+  
+// }
+//==============
+// showStars(8);
+
+// function showStars(rows) {
+//   for (let row = 1; row <= rows; row++) {
+//     let pattern = '';
+//     for (let i = 0; i < row; i++)
+//       pattern += '*';
+//     console.log(pattern);
+//   }
+// }
+//================
+
+// function  calculateGrade(marks) {
+//   const average = calculateAverage(marks);
+
+//   if (average < 60) return 'F';
+//   if (average < 70) return 'D';
+//   if (average < 80) return 'C';
+//   if (average < 90) return 'B';
+//   return 'A';
+// }
+
+// function calculateAverage(array) {
+//   let sum = 0;
+//   for (let value of array)
+//     sum += value;
+//   return sum / array.length;
+// }
+
+// console.log(calculateGrade([90]));
+//===============
+// showStars(5);
+
+// function showStars(rows) {
+//   for (let row = 1; row <= rows; row++) {
+//     let pattern = '';
+//     for (let i = 0; i < row; i++) 
+//       pattern += '*';
+//     console.log(pattern);
+//   }
+// }
+//===========
+// function showPrimes(limit){
+//   for (let number = 2; number <= limit; number++)
+//     if(isPrime(number)) console.log(number);
+// }
+
+// function isPrime(number) {
+//   for (let factor = 2; factor < number; factor++)
+//     if (number % factor === 0)
+//       return false;
+
+//     return true;
+// }
+
+// showPrimes(1000);
+//===========
+// //object-oriented programming
+
+// const circle = {
+//   radius: 1,
+//   location: {
+//     x: 1,
+//     y: 1
+//   },
+//   isVisible: true,
+//   draw: function() {
+//     console.log('draw');
+//   }
+// };
+
+// circle.draw(); //method
+//===========
+// //Factory Function
+// function createCircle(radius) {
+//   return {
+//     radius,
+//     draw() {
+//       console.log('draw');
+//     }
+//   };
+// }
+// const circle1 = createCircle(1);
+// console.log(circle1);
+//=================
+// //Camel Notation: oneTwoThreeFour
+// //Pascal Notation: OneTwoThreeFour
+
+// //Constructor Function
+// function Circle(radius) {
+//   this.radius = radius;
+//   this.draw = function() {
+//     console.log('draw');
+//   }
+// }
+
+// const circle = new Circle(1);
+// circle.draw();
+//============
+// //dynamic nature of objects
+// const circle = {
+//   radius: 1
+// }
+
+// circle.color = 'yellow';
+// circle.draw = function() {}
+
+// delete circle.color;
+// delete circle.draw;
+
+// console.log(circle);
+//============
 
