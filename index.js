@@ -440,26 +440,86 @@
 //every object has a constructor property
 
 //Factory Function
-function createCircle(radius) {
-  return {
-    radius,
-    draw() {
-      console.log('draw');
-    }
-  };
+// function createCircle(radius) {
+//   return {
+//     radius,
+//     draw() {
+//       console.log('draw');
+//     }
+//   };
+// }
+// const circle = createCircle(1);
+
+// console.log(circle.constructor);
+
+// //Constructor Function
+// function Circle(radius) {
+//   this.radius = radius;
+//   this.draw = function() {
+//     console.log('draw');
+//   }
+// }
+
+// const another = new Circle(1);
+
+// console.log(another.constructor);
+//===========
+
+// //functions are objects
+
+// function Circle(radius) {
+//   this.radius = radius;
+//   this.draw = function() {
+//     console.log('draw');
+//   }
+// }
+
+// const another = new Circle(1);
+
+// console.log(Circle.name);
+// console.log(Circle.length);
+// console.log(Circle.constructor);
+// Circle.call({}, 1)
+
+// const Circle1 = new Function('radius', `
+// this.radius = radius;
+// this.draw = function() {
+//   console.log('draw');
+// }
+// `);
+
+// const circle = new Circle1(1);
+// console.log(circle);
+//=========
+
+// value vs. reference types
+
+//primitives are copied by their value
+//objects are copied by their reference
+
+let x = { value: 10};
+let y = x;
+
+x.value = 20;
+
+console.log(y);
+//------------
+let number = 10;
+
+function increase(number) {
+  number++;
 }
-const circle = createCircle(1);
 
-console.log(circle.constructor);
+increase(number);
+console.log(number);//10
 
-//Constructor Function
-function Circle(radius) {
-  this.radius = radius;
-  this.draw = function() {
-    console.log('draw');
-  }
+//---------
+
+let obj = { value: 10};
+
+function increase(obj) {
+  obj.value++;
 }
 
-const another = new Circle(1);
-
-console.log(another.constructor);
+increase(obj);
+console.log(obj);
