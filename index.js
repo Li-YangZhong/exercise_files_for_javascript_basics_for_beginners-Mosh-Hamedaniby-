@@ -497,29 +497,237 @@
 //primitives are copied by their value
 //objects are copied by their reference
 
-let x = { value: 10};
-let y = x;
+// let x = { value: 10};
+// let y = x;
 
-x.value = 20;
+// x.value = 20;
 
-console.log(y);
-//------------
-let number = 10;
+// console.log(y);
+// //------------
+// let number = 10;
 
-function increase(number) {
-  number++;
-}
+// function increase(number) {
+//   number++;
+// }
 
-increase(number);
-console.log(number);//10
+// increase(number);
+// console.log(number);//10
 
-//---------
+// //---------
 
-let obj = { value: 10};
+// let obj = { value: 10};
 
-function increase(obj) {
-  obj.value++;
-}
+// function increase(obj) {
+//   obj.value++;
+// }
 
-increase(obj);
-console.log(obj);
+// increase(obj);
+// console.log(obj);
+//=================
+// // enumerating properties of an object
+// const circle = {
+//   radius: 1,
+//   draw() {
+//     console.log('draw');
+//   }
+// };
+
+// for ( let key in circle) 
+//   console.log(key, circle[key]);
+
+// for (let key of Object.keys(circle))
+//   console.log(key);
+
+// for (let entry of Object.keys(circle))
+//   console.log(entry);
+
+// if ('color' in circle) console.log('yes');
+// if ('radius' in circle) console.log('yes');
+
+//===============
+// //cloning an object
+// const circle = {
+//   radius: 1,
+//   draw() {
+//     console.log('draw');
+//   }
+// };
+
+// // const another = {};
+// // for (let key in circle)
+// //   another[key] = circle[key];
+
+// // the following one line of code equals the above three lines of code
+
+// // const another = Object.assign({}, circle);
+
+// //the following method is the simplest way of cloning an object
+
+// const another = { ...circle};
+
+// console.log(another);
+//===========
+
+// Javascript manages garbage collection automatically
+
+//=============
+// //Math is a built in object in Javascript
+
+// console.log(Math.PI);
+
+// console.log(Math.abs(-5));
+
+// console.log(Math.random());
+
+// console.log(Math.round(1.9));
+
+// console.log(Math.max(1,2,3,4,5));
+
+// console.log(Math.min(1,2,3,4,5));
+
+//=========
+
+// //string primitive
+
+// const message = 'hi';
+// console.log(typeof message);
+// console.log(message.length);
+// console.log(message[0]);
+// console.log(message.includes('h'));
+// console.log(message.startsWith('h'));
+// console.log(message.endsWith('i'));
+// console.log(message.indexOf('i'));
+// console.log(message.toUpperCase());
+// console.log('This sentence takes \n two lines.');
+// // String object
+// const another = new String('hi');
+
+// console.log(typeof another);
+//===============
+// //template literal
+
+// const name = 'John';
+
+// const message = 
+
+// `Hi ${name},
+
+// This is a message sent to you.
+
+// Regards,
+// `
+//===========
+//Date
+
+// const now = new Date();
+// const date1 = new Date('May 11 2018 09:00');
+// const date2 = new Date(2018, 4, 11,9);
+// now.setFullYear(2017);
+// console.log(now.toDateString());
+// console.log(now.toTimeString());
+// console.log(now.toISOString());
+//============
+// //excercise: address object
+
+// let address = {
+//   street: 'a',
+//   city: 'b',
+//   zipCode: 'c'
+// };
+
+// function showAddress(address) {
+//   for (let key in address)
+//     console.log(key, address[key]);
+// }
+
+// showAddress(address);
+
+//============
+
+// //excercise: factory function and constructor function
+
+// let address = createAddress('a', 'b', 'c');
+
+// console.log(address);
+
+// //factory function
+// function createAddress(street, city, zipCode) {
+//   return {
+//     street,
+//     city,
+//     zipCode
+//   };
+// }
+
+// //constructor function
+
+// function Address(street, city, zipCode) {
+//   this.street = street;
+//   this.city = city;
+//   this.zipCode = zipCode;
+// }
+
+// let anotherAddress = new Address('a', 'b', 'c');
+// console.log(anotherAddress);
+//=======
+// let address1 = new Address('a', 'b', 'c');
+// let address2 = new Address('a', 'b', 'c');
+// console.log(areEqual(address1, address2));
+// console.log(areSame(address1, address2));
+
+// let address3 = address1;
+// console.log(areSame(address3, address1));
+
+// //constructor function  
+// function Address(street, city, zipCode) {
+//   this.street = street;
+//   this.city = city;
+//   this.zipCode = zipCode;
+// }
+
+// function areEqual(address1, address2) {
+//   return address1.street === address2.street &&
+//     address1.city === address2.city &&
+//     address1.zipCode === address2.zipCode;
+// }
+
+// function areSame(address1, address2) {
+//   return address1 === address2;
+// }
+
+//===========
+
+// let post = new Post('a', 'b', 'c');
+
+// function Post(title, body, author) {
+//   this.title = title;
+//   this.body = body;
+//   this.author = author;
+//   this.views = 0;
+//   this.comments = [];
+//   this.isLive = false;
+// }
+
+
+// console.log(post);
+//=========
+
+// //adding elements to an array.
+
+// const numbers = [3, 4];
+
+// //adding to the end
+// numbers.push(5,6);
+// console.log(numbers);
+
+// //adding to the beginning
+
+// numbers.unshift(1, 2);
+// console.log(numbers);
+
+// //add to the middle
+
+// numbers.splice(2, 0, 'a', 'b');
+// console.log(numbers);
+//===========
+
