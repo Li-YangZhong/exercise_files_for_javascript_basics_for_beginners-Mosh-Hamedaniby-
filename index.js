@@ -731,3 +731,71 @@
 // console.log(numbers);
 //===========
 
+// //finding elements(primitives)
+
+// const numbers = [1, 2, 3, 1, 4];
+// console.log(numbers.indexOf('a'));
+// console.log(numbers.indexOf(1));
+// console.log(numbers.lastIndexOf(1));
+// console.log(numbers.indexOf(1) !== -1);
+// console.log(numbers.includes(1));
+// console.log(numbers.indexOf(1, 2)); //searching from index 2
+
+//============
+// //finding elements(reference types)
+// const courses = [
+//   { id: 1, name: 'a'},//click shift+alt+down arrow will copy the current line to the line below.
+//   { id: 1, name: 'a'},
+// ]
+
+// console.log(courses.includes( { id: 1, name: 'a'}));
+
+// console.log(courses.find( 
+//   function(course) {
+//     return course.name === 'a';
+//   }
+// ));
+
+// console.log(courses.findIndex( 
+//   function(course) {
+//     return course.name === 'a';
+//   }
+// ));
+//============
+// //arrow function
+
+// const courses = [
+//   { id: 1, name: 'a'},
+//   { id: 1, name: 'a'},
+// ];
+
+// const course = courses.find(course => course.name === 'a');
+
+// console.log(course);
+
+//=========
+
+// //removing elements
+
+// const numbers = [ 1, 2, 3, 4];
+
+// //removing the last element
+
+// const last = numbers.pop();
+// console.log(numbers);
+// console.log(last);
+
+// //removing the first element
+
+// const first = numbers.shift();
+// console.log(first);
+// console.log(numbers);
+
+// //removing element from the middle
+
+// numbers.splice(1,1); //delete 1 element from index 1
+// console.log(numbers);
+
+//=========
+
+
