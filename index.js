@@ -798,4 +798,150 @@
 
 //=========
 
+//emptying an array
+
+//solution 1
+// let numbers = [1, 2, 3, 4];
+// let another = numbers;
+// numbers = [];
+
+// console.log(numbers);
+// console.log(another);
+
+//solution 2
+// let numbers = [1, 2, 3, 4];
+// let another = numbers;
+
+// numbers.length = 0;
+
+// console.log(numbers);
+// console.log(another);
+
+//solution 3
+// let numbers = [1, 2, 3, 4];
+// let another = numbers;
+
+// numbers.splice(0, numbers.length);
+
+// console.log(numbers);
+// console.log(another);
+
+//solution 4 
+
+// let numbers = [1, 2, 3, 4];
+// let another = numbers;
+
+// while (numbers.length > 0)
+//   numbers.pop();
+
+// console.log(numbers);
+// console.log(another);
+//===========
+//combining and slicing arrays
+
+// const first = [1, 2, 3];
+// const second = [4, 5, 6];
+
+// const combined = first.concat(second);
+// console.log(combined);
+
+// const slice = combined.slice(2,5);
+// console.log(slice);
+
+
+// const refArray = [{ id: 1}];
+// const anotherArray = [4, 5, 6];
+
+// const merged = refArray.concat(anotherArray);
+// refArray[0].id = 10;
+
+// console.log(merged);
+
+//=============
+// spread operator
+
+// const first = [1, 2, 3];
+// const second = [4, 5, 6];
+// const combined = [...first, ...second];
+// console.log(combined);
+
+//=============
+//iterating an array
+// const numbers = [1,2,3];
+
+// for (let number of numbers)
+//   console.log(number);
+
+// numbers.forEach(function(number) {
+//   console.log(number);
+// })
+
+// numbers.forEach( number => console.log(number));
+
+// numbers.forEach( (number, index) => console.log(index, number));
+
+// for (let number in numbers) // iterating index
+//   console.log(number);
+
+  //=========
+  // joining arrays
+
+  // const numbers = [1, 2, 3];
+  // const joined = numbers.join(',');
+  // console.log(joined);
+
+  // const message = 'This is my first message';
+  // const parts = message.split(' ');
+  // console.log(parts);
+
+  // const combined = parts.join('-');
+  // console.log(combined);
+
+  //=============
+
+//sorting arrays
+// const numbers = [2, 3, 1];
+// numbers.sort();
+// console.log(numbers);
+
+// numbers.reverse();
+// console.log(numbers);
+
+// const courses = [
+//   { id: 1, name: 'Node.js'},
+//   { id: 2, name: 'Javascript'},
+// ];
+
+// courses.sort();
+
+// console.log(courses);
+
+// courses.sort(function(a, b) {
+//   const nameA = a.name.toLowerCase();
+//   const nameB = b.name.toLowerCase();
+
+//   if(nameA < nameB) return -1;
+//   if(nameA > nameB) return 1;
+//   return 0;
+// });
+
+// console.log(courses);
+//=============
+//testing the elements of an array
+
+const numbers = [1, -2, 3];
+
+const allPositive = numbers.every(function(value) {
+  return value >= 0;
+
+});
+
+console.log(allPositive);
+
+const atLeastOnePositive = numbers.some(function(value) {
+  return value >= 0;
+
+});
+
+console.log(atLeastOnePositive);
 
