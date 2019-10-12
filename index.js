@@ -996,3 +996,330 @@
 
 // console.log(sum);
 //=========
+//exercise: array from range
+
+// function arrayFromRange(min, max) {
+//   const output = [];
+//   for (let i = min; i <= max; i++)
+//     output.push(i);
+//   return output;
+// }
+
+// console.log(arrayFromRange(1, 4));
+//==========
+//exercise: include function
+
+// function includes(array, searchElement) {
+//   for (let element of array)
+//     if (element === searchElement)
+//       return true;
+//     return false;
+// }
+
+// const numbers = [1, 2, 3, 4];
+// console.log(includes(numbers, -1));
+// console.log(includes(numbers, 3));
+
+//========
+//exercise except
+
+// function except(array, excluded) {
+//   const output = [];
+//   for (let element of array)
+//     if (!excluded.includes(element))
+//       output.push(element);
+//     return output;
+// }
+
+// const numbers = [1, 2, 3, 4, 1, 1];
+
+// console.log(except(numbers, [1]));
+
+//=============
+//moving an element
+
+// function move(array, index, offset) {
+//   const position = index + offset;
+//   if (position >= array.length || position < 0) {
+//     console.error('Invalid offset.');
+//     return;
+//   }
+
+//   const output = [...array];
+//   const element = output.splice(index, 1)[0];
+//   output.splice(position, 0, element);
+//   return output;
+// }
+
+// const numbers = [1, 2, 3, 4];
+// console.log(move(numbers, 1, 2));
+// console.log(move(numbers, 1, 5));
+// console.log(move(numbers, 1, -5));
+//==============
+//count occurences
+// function countOccurences(array, searchElement) {
+//   // let count = 0;
+//   // for (let element of array)
+//   //   if (element === searchElement)
+//   //     count++;
+//   // return count;
+
+//   return array.reduce((accumulator, current) => {
+//     const occurence = (current === searchElement) ? 1 : 0;
+//     console.log(accumulator, current, searchElement);
+//     return accumulator + occurence;
+//   }, 0);
+// }
+
+// const numbers = [1, 2, 3, 4, 1];
+
+// const count = countOccurences(numbers, 1);
+// console.log(count);
+//============
+//get max
+
+// const numbers = [1, 2, 3, 4];
+
+// const max = getMax([1, 2, 2, 1, 3]);
+
+// console.log(max);
+
+// function getMax(array) {
+//   if (array.length === 0) return undefined;
+
+//   // let max = array[0];
+
+//   // for (let i = 1; i < array.length; i++) 
+//   //    if( array[i] > max)
+//   //     max = array[i];
+  
+//   // return max;
+
+//   return array.reduce((a, b) => (a>b) ? a : b);
+// }
+//============
+
+//exercise: movies
+
+// const movies = [
+//   { title: 'a', year: 2018, rating: 4.5},
+//   { title: 'b', year: 2018, rating: 4.7},
+//   { title: 'c', year: 2018, rating: 3},
+//   { title: 'd', year: 2017, rating: 4.5},
+// ]
+
+// const titles = movies
+//   .filter(m => m.year === 2018 && m.rating >= 4)
+//   .sort((a, b) => a.rating -b.rating)
+//   .reverse()
+//   .map(m => m.title)
+
+// console.log(titles);
+//============
+// function declaration
+
+// walk();
+// //before javascript runs, function declarations will be hosted to the beginning of the code
+// function walk() {
+//   console.log('walk');
+// }
+
+// walk();
+
+// //anonymous function expression
+// // run();// error; used before initialization
+// const run = function() {
+//   console.log('run');
+// };
+
+// let move = run;
+// run();
+// move();
+//==============
+//arguments
+
+// function sum() {
+//   console.log(arguments);//every function in javascript has a special object called arguments
+//   let total = 0;
+//   for (let value of arguments)
+//     total += value;
+//   return total;
+// }
+
+// console.log(sum(1));
+// console.log(sum(1, 2, 3,3));
+//==========
+//rest operator
+
+// function sum(discount, ...prices) {
+//   const total = prices.reduce((a,b) => a + b);
+//   return total * (1 - discount);
+// }
+
+// console.log(sum(0.1, 20, 30));
+//===========
+//default parameters
+
+// function interest(principal, rate = 3.5, years = 5) {
+//   return principal * rate / 100 * years;
+// }
+
+// console.log(interest(10000));
+//========
+//getters and setters
+
+// const person = {
+//   firstName: 'Mosh',
+//   lastName: 'Hamedani',
+//   get fullName() {
+//     return `${person.firstName} ${person.lastName}`
+//   },
+//   set fullName(value) {
+//     const parts = value.split(' ');
+//     this.firstName = parts[0];
+//     this.lastName = parts[1];
+//   }
+// };
+// console.log(person.fullName);
+// person.fullName = 'John Smith';
+// console.log(person);
+//===========
+
+// const person = {
+//   firstName: 'Mosh',
+//   lastName: 'Hamedani',
+//   get fullName() {
+//     return `${person.firstName} ${person.lastName}`
+//   },
+//   set fullName(value) {
+//     if (typeof value !== 'string') 
+//       throw new Error('Value is not a string.');
+
+//     const parts = value.split(' ');
+//     if (parts.length !== 2)
+//       throw new Error('Enter a first and last name.')
+//     this.firstName = parts[0];
+//     this.lastName = parts[1];
+//   }
+// };
+// try {
+//   person.fullName = "";
+// }
+// catch (e) {
+//   alert(e);
+// }
+
+// console.log(person);
+//==========
+// {
+//   const message = 'hi';
+// }
+// console.log(message); //error; 
+//=========
+// const color = 'red';//global scope
+// function start() {
+//   const message = 'hi';
+//   const color = 'blue';//local variable or constant take precedence over global variable or constant
+
+//   console.log(color);
+//   // if (true) {
+//   //   const another = 'bye';
+//   // }
+
+//   // // console.log(another);//error; another is not defined
+
+//   // for (let i = 0; i < 5; i++) {
+//   //   console.log(i);
+//   // }
+
+//   // console.log(i);//error; i is not defined
+
+
+// }
+
+// function stop() {
+//   const message = 'bye';//local scope
+// }
+// start();
+//==========
+
+//let vs var
+
+// function start_let() {
+//   for (let i = 0; i < 5; i++)//let has block scope
+//     console.log(i);
+//   console.log(i);
+// }
+
+// start_let();
+
+// function start_var() {
+//   for (var i = 0; i < 5; i++) //var has function scope
+//     console.log(i);
+//   console.log(i);
+// }
+
+// start_var();
+
+// function start_var() {
+//   for (var i = 0; i < 5; i++) 
+//     if (true) {
+//       var color = 'red'; //var has function scope
+//     }
+//   console.log(color);
+// }
+
+// start_var();
+
+// var color = 'red';//var outside any functions have global scope; color is attached to the window object
+// console.log(window.color);//red
+// let age = 30; //age has global scope as well, but isn't attached to the window object
+// console.log(window.age);//undefined
+
+// //the following function is attached to window object as well
+// function sayHi() {
+//   console.log('hi');
+// }
+
+// console.log(window.sayHi);
+
+//===========
+
+//the key word 'this' represents the object that is executing the current function
+
+// const video = {
+//   title: 'a',
+//   play() {
+//     console.log(this);
+//   }
+// }
+
+// video.stop = function() {
+//   console.log(this);
+// }
+
+// video.stop();
+
+// function playVideo() {
+//   console.log(this);
+// }
+
+// playVideo();
+
+// function Video(title) {
+//   this.title = title;
+//   console.log(this);
+// }
+
+// const v = new Video('b');
+
+const video = {
+  title: 'a',
+  tags: ['a', 'b', 'c'],
+  showTags() {
+    this.tags.forEach(function(tag) {
+      console.log(this.title, tag);
+    }, this)
+  }
+}
+video.showTags();
