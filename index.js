@@ -929,19 +929,70 @@
 //=============
 //testing the elements of an array
 
-const numbers = [1, -2, 3];
+// const numbers = [1, -2, 3];
 
-const allPositive = numbers.every(function(value) {
-  return value >= 0;
+// const allPositive = numbers.every(function(value) {
+//   return value >= 0;
 
-});
+// });
 
-console.log(allPositive);
+// console.log(allPositive);
 
-const atLeastOnePositive = numbers.some(function(value) {
-  return value >= 0;
+// const atLeastOnePositive = numbers.some(function(value) {
+//   return value >= 0;
 
-});
+// });
 
-console.log(atLeastOnePositive);
+// console.log(atLeastOnePositive);
 
+//=============
+//filtering an array
+
+// const numbers = [1, -1, 2, 3];
+
+// const filtered = numbers.filter( n => n >= 0);
+
+// console.log(filtered);
+// //mapping an arrays
+// const items = filtered.map(n => '<li>' + n + "</li");
+
+// console.log(items);
+
+// const html = '<ul>' + items.join('') + '</ul>';
+
+// console.log(html);
+
+// const items2 = filtered.map( n=> {
+//   return obj = { value: n};
+ 
+// });
+
+// console.log(items2)
+//=========
+//chaining methods
+
+// const numbers = [1, -1, 2, 3];
+
+// const items = numbers
+//   .filter(n => n >= 0)
+//   .map(n => ({ value: n}))
+//   .filter(obj => obj.value > 1)
+//   .map(obj => obj.value);
+// console.log(items);
+//==========
+//reducing an array
+
+// const numbers = [1, -1, 2, 3];
+
+// // let sum = 0;
+// // for (let n of numbers)
+// //   sum += n;
+
+// // console.log(sum);
+
+// const sum = numbers.reduce((accumulator, currentValue) => {
+//   return accumulator + currentValue;
+// }, 0);
+
+// console.log(sum);
+//=========
